@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		E10806411AB9ED7000E42BC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E10806401AB9ED7000E42BC3 /* main.m */; };
 		E10806441AB9ED7000E42BC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E10806431AB9ED7000E42BC3 /* AppDelegate.m */; };
-		E10806471AB9ED7000E42BC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E10806461AB9ED7000E42BC3 /* ViewController.m */; };
+		E10806471AB9ED7000E42BC3 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E10806461AB9ED7000E42BC3 /* MenuViewController.m */; };
 		E108064A1AB9ED7000E42BC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10806481AB9ED7000E42BC3 /* Main.storyboard */; };
 		E108064C1AB9ED7000E42BC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E108064B1AB9ED7000E42BC3 /* Images.xcassets */; };
 		E108064F1AB9ED7000E42BC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E108064D1AB9ED7000E42BC3 /* LaunchScreen.xib */; };
 		E108065B1AB9ED7000E42BC3 /* HappyLunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E108065A1AB9ED7000E42BC3 /* HappyLunchTests.m */; };
+		E10806661AB9F70F00E42BC3 /* FoodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E10806651AB9F70F00E42BC3 /* FoodTableViewCell.m */; };
+		E10806691ABA087A00E42BC3 /* DrinkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E10806681ABA087A00E42BC3 /* DrinkTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		E10806401AB9ED7000E42BC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E10806421AB9ED7000E42BC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E10806431AB9ED7000E42BC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E10806451AB9ED7000E42BC3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E10806461AB9ED7000E42BC3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E10806451AB9ED7000E42BC3 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		E10806461AB9ED7000E42BC3 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		E10806491AB9ED7000E42BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E108064B1AB9ED7000E42BC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E108064E1AB9ED7000E42BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E10806541AB9ED7000E42BC3 /* HappyLunchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyLunchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10806591AB9ED7000E42BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E108065A1AB9ED7000E42BC3 /* HappyLunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyLunchTests.m; sourceTree = "<group>"; };
+		E10806641AB9F70F00E42BC3 /* FoodTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTableViewCell.h; sourceTree = "<group>"; };
+		E10806651AB9F70F00E42BC3 /* FoodTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTableViewCell.m; sourceTree = "<group>"; };
+		E10806671ABA087A00E42BC3 /* DrinkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkTableViewCell.h; sourceTree = "<group>"; };
+		E10806681ABA087A00E42BC3 /* DrinkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +89,12 @@
 			children = (
 				E10806421AB9ED7000E42BC3 /* AppDelegate.h */,
 				E10806431AB9ED7000E42BC3 /* AppDelegate.m */,
-				E10806451AB9ED7000E42BC3 /* ViewController.h */,
-				E10806461AB9ED7000E42BC3 /* ViewController.m */,
+				E10806451AB9ED7000E42BC3 /* MenuViewController.h */,
+				E10806461AB9ED7000E42BC3 /* MenuViewController.m */,
+				E10806641AB9F70F00E42BC3 /* FoodTableViewCell.h */,
+				E10806651AB9F70F00E42BC3 /* FoodTableViewCell.m */,
+				E10806671ABA087A00E42BC3 /* DrinkTableViewCell.h */,
+				E10806681ABA087A00E42BC3 /* DrinkTableViewCell.m */,
 				E10806481AB9ED7000E42BC3 /* Main.storyboard */,
 				E108064B1AB9ED7000E42BC3 /* Images.xcassets */,
 				E108064D1AB9ED7000E42BC3 /* LaunchScreen.xib */,
@@ -219,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E10806471AB9ED7000E42BC3 /* ViewController.m in Sources */,
+				E10806471AB9ED7000E42BC3 /* MenuViewController.m in Sources */,
+				E10806691ABA087A00E42BC3 /* DrinkTableViewCell.m in Sources */,
+				E10806661AB9F70F00E42BC3 /* FoodTableViewCell.m in Sources */,
 				E10806441AB9ED7000E42BC3 /* AppDelegate.m in Sources */,
 				E10806411AB9ED7000E42BC3 /* main.m in Sources */,
 			);

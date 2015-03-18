@@ -1,25 +1,191 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EyN-PT-FWc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="snv-Rv-Zvc">
+                                <rect key="frame" x="0.0" y="162" width="600" height="374"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="foodCellID" rowHeight="75" id="CTB-Yv-wbN" customClass="FoodTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CTB-Yv-wbN" id="pNg-ig-h6Y">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIj-vT-HaW">
+                                                    <rect key="frame" x="8" y="12" width="66" height="51"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="66" id="0CX-ke-s2S"/>
+                                                        <constraint firstAttribute="height" constant="51" id="Ooa-qZ-3RL"/>
+                                                    </constraints>
+                                                    <state key="normal" image="bltImage">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectFoodOnTap:" destination="CTB-Yv-wbN" eventType="touchUpInside" id="iL2-iH-5rA"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLQ-Ru-wxP">
+                                                    <rect key="frame" x="272" y="9" width="56" height="58"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="56" id="iqt-yB-zPv"/>
+                                                        <constraint firstAttribute="height" constant="58" id="xcP-mn-7m5"/>
+                                                    </constraints>
+                                                    <state key="normal" image="pbjImage">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectFoodOnTap:" destination="CTB-Yv-wbN" eventType="touchUpInside" id="eO1-re-arr"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nW-KF-Pcc">
+                                                    <rect key="frame" x="504" y="19" width="88" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="88" id="G8N-fa-dUy"/>
+                                                        <constraint firstAttribute="height" constant="38" id="aul-vQ-ebs"/>
+                                                    </constraints>
+                                                    <state key="normal" image="saladImage">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectFoodOnTap:" destination="CTB-Yv-wbN" eventType="touchUpInside" id="w9v-o3-UbI"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="XIj-vT-HaW" secondAttribute="centerY" id="2XR-xi-4ic"/>
+                                                <constraint firstAttribute="centerY" secondItem="5nW-KF-Pcc" secondAttribute="centerY" id="360-Ub-rH9"/>
+                                                <constraint firstItem="XIj-vT-HaW" firstAttribute="leading" secondItem="pNg-ig-h6Y" secondAttribute="leadingMargin" id="RIy-2Q-agI"/>
+                                                <constraint firstAttribute="centerY" secondItem="fLQ-Ru-wxP" secondAttribute="centerY" id="ePv-lv-KD5"/>
+                                                <constraint firstAttribute="centerX" secondItem="fLQ-Ru-wxP" secondAttribute="centerX" id="ngA-cd-kAq"/>
+                                                <constraint firstItem="5nW-KF-Pcc" firstAttribute="trailing" secondItem="pNg-ig-h6Y" secondAttribute="trailingMargin" id="sW6-5c-nXQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="drinkCellID" rowHeight="75" id="1lb-0O-tfy" customClass="DrinkTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1lb-0O-tfy" id="iVG-FJ-1nz">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixD-te-Hke">
+                                                    <rect key="frame" x="179" y="9" width="56" height="58"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="56" id="930-nq-d2b"/>
+                                                        <constraint firstAttribute="height" constant="58" id="jkM-U6-ZnF"/>
+                                                    </constraints>
+                                                    <state key="normal" image="milkImage">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectedButtonOnTap:" destination="1lb-0O-tfy" eventType="touchUpInside" id="NVq-5Q-xt8"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmE-YZ-2em">
+                                                    <rect key="frame" x="328" y="19" width="88" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="88" id="bxb-dF-WsA"/>
+                                                        <constraint firstAttribute="height" constant="38" id="pDE-H1-ap3"/>
+                                                    </constraints>
+                                                    <state key="normal" image="sodaImage">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectedButtonOnTap:" destination="1lb-0O-tfy" eventType="touchUpInside" id="GM0-E2-lSf"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="ixD-te-Hke" secondAttribute="centerX" constant="93" id="CpZ-Kg-I0q"/>
+                                                <constraint firstAttribute="centerY" secondItem="TmE-YZ-2em" secondAttribute="centerY" id="ZZI-P1-tcz"/>
+                                                <constraint firstAttribute="centerX" secondItem="TmE-YZ-2em" secondAttribute="centerX" constant="-72" id="fy9-9h-dWQ"/>
+                                                <constraint firstAttribute="centerY" secondItem="ixD-te-Hke" secondAttribute="centerY" id="owv-76-HH7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="70e-IN-zkZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LgW-Op-cGN"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ish-uc-Jdl">
+                                <rect key="frame" x="329" y="29" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="lS1-bm-QGd"/>
+                                    <constraint firstAttribute="width" constant="100" id="m0v-nj-ImI"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hfc-4D-27w">
+                                <rect key="frame" x="165" y="29" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="cYL-u1-wG1"/>
+                                    <constraint firstAttribute="width" constant="100" id="vyE-QV-kIA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hfc-4D-27w" secondAttribute="centerX" constant="85" id="09u-RT-1mN"/>
+                            <constraint firstItem="snv-Rv-Zvc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="98o-VM-E8M"/>
+                            <constraint firstItem="ish-uc-Jdl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="BMr-gl-nmD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="snv-Rv-Zvc" secondAttribute="bottom" id="Dh1-Qp-tFS"/>
+                            <constraint firstItem="snv-Rv-Zvc" firstAttribute="top" secondItem="ish-uc-Jdl" secondAttribute="bottom" constant="33" id="FbZ-VU-oLD"/>
+                            <constraint firstAttribute="centerX" secondItem="ish-uc-Jdl" secondAttribute="centerX" constant="-79" id="P6G-2T-CdS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="snv-Rv-Zvc" secondAttribute="trailing" constant="-16" id="QyQ-l1-OxI"/>
+                            <constraint firstItem="hfc-4D-27w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="r4w-1u-39N"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="yI3-9g-BsT"/>
+                    <connections>
+                        <outlet property="drinkImageView" destination="ish-uc-Jdl" id="QV3-sS-o4i"/>
+                        <outlet property="foodImageView" destination="hfc-4D-27w" id="IXJ-Qj-maD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1512" y="477"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Mk-JH-DCD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EyN-PT-FWc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f4H-UU-Y13">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="P2s-XX-hf7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBz-bf-1Bj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="1138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bltImage" width="66" height="51"/>
+        <image name="milkImage" width="54" height="67"/>
+        <image name="pbjImage" width="56" height="58"/>
+        <image name="saladImage" width="88" height="38"/>
+        <image name="sodaImage" width="65" height="65"/>
+    </resources>
 </document>
